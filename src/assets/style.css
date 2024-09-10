@@ -1,1 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');;
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+html, body{
+    background: #eee;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+    border:none;
+    box-shadow: none;
+}
+
+.logo{
+    max-width: 150px;
+    width:100%;
+    display: block;
+    margin: auto;
+    margin-top: -100px;
+    background: #ffffff;
+    border-radius: 100%;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+.login{
+    background: #ffffff;
+    max-width:450px;
+    width:100%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .05);
+    padding: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.login h1{
+    text-align: center;
+    font-weight: 700;
+    color: #313634;
+    margin-bottom: 40px;
+}
+
+.login label{
+    display: block;
+    width: 100%;
+    color: #777;
+    text-align: left !important;
+}
+
+.login input[type="email"], .login input[type="password"]{
+    background: #eee;
+    border: none;
+    padding: 12px 15px;
+    font-size: 15px;
+}
+
+.login input[type="email"]:focus, .login input[type="password"]:focus{
+    border-bottom: solid 2px #456d61;
+    box-shadow: none;
+}
+
+.login button{
+    border-radius: 20px;
+    padding: 7px 30px;
+    background: #456d61;
+    border: none;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.login button:hover{
+    background: #456d61;
+}

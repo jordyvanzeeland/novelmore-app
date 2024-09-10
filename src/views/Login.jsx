@@ -20,23 +20,19 @@ const Login = () => {
         <div className="container">
             <div className="row justify-content-center">
                 <div className="col-md-8">
-                    <div className="card">
-                        <div className="card-header">Login</div>
-
+                    <div className="login">
+                    <img src="/logo.png" className="logo" />
+                    <h1>Novelmore</h1>
                         <div className="card-body">
-                                <div className="row mb-3">
-                                    <label htmlFor="email" className="col-md-4 col-form-label text-md-end">E-mailadres</label>
-
-                                    <div className="col-md-6">
-                                        <input id="email" type="email" className="form-control" name="email" required autoComplete="email" autoFocus onChange={(event) => setUsername(event.target.value)} />
+                                <div className="row mb-4">
+                                    <div className="col-md-12">
+                                        <input id="email" type="email" placeholder="E-mailadres" className="form-control" name="email" required autoComplete="email" autoFocus onChange={(event) => setUsername(event.target.value)} />
                                     </div>
                                 </div>
 
-                                <div className="row mb-3">
-                                    <label htmlFor="password" className="col-md-4 col-form-label text-md-end">Wachtwoord</label>
-
-                                    <div className="col-md-6">
-                                        <input id="password" type="password" className="form-control" name="password" required autoComplete="current-password" onChange={(event) => setPassword(event.target.value)} />
+                                <div className="row mb-4">
+                                    <div className="col-md-12">
+                                        <input id="password" type="password" placeholder="Wachtwoord" className="form-control" name="password" required autoComplete="current-password" onChange={(event) => setPassword(event.target.value)} />
                                     </div>
                                 </div>
 
