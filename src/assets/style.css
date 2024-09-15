@@ -7,13 +7,18 @@ html, body{
     font-weight: 400;
 }
 
+h3{
+    font-size:18px;
+    margin: 10px 0;
+}
+
 textarea:focus, input:focus{
     outline: none;
     border:none;
     box-shadow: none;
 }
 
-.logo{
+.login .logo{
     max-width: 150px;
     width:100%;
     display: block;
@@ -23,6 +28,15 @@ textarea:focus, input:focus{
     border-radius: 100%;
     padding: 10px;
     margin-bottom: 0px;
+}
+
+.header-logo{
+    max-width: 50px;
+}
+
+.navbar-brand span{
+    font-weight: 500;
+    margin-left: 5px;
 }
 
 .login{
@@ -46,6 +60,7 @@ textarea:focus, input:focus{
     font-weight: 700;
     color: #313634;
     margin-bottom: 40px;
+    margin-top:10px;
 }
 
 .login label{
@@ -68,15 +83,22 @@ textarea:focus, input:focus{
 }
 
 .login button{
-    border-radius: 20px;
-    padding: 7px 30px;
+    padding: 10px 30px;
     background: #456d61;
     border: none;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
     margin-top: 10px;
     font-size: 14px;
+    width: 100%;
 }
 
 .login button:hover{
     background: #456d61;
+}
+
+.challenge{
+    background: #ffffff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .05);
+    padding: 15px 15px;
+    margin-bottom: 10px;
 }

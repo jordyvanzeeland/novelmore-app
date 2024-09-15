@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
+import moment from "moment";
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const login = () => {
-        return fetch(`http://localhost:8000/api/auth/login?email=${username}&password=${password}`, {
-            method: "POST",
-            headers: {"Content-Type": "application/json"}
-        })
-        .then(response => response.json())
-        .then(res => {
-            localStorage.setItem('token', res.access_token);
+    const login = async() => {
+        const functions = await import("../Functions");
+        const data = await functions.fetchApi("POST", `/auth/login?email=${username}&password=${password}`);
+
+        if(data && data.access_token){
+            localStorage.setItem('token', data.access_token);
+            localStorage.setItem('token_issued', moment().format("YYYY-MM-DD HH:mm:ss"));
+            localStorage.setItem('token_expired', moment().add(1, 'hours').format("YYYY-MM-DD HH:mm:ss"));
             window.location.reload();
-        })
+        }
     }
 
     return(
@@ -37,7 +38,7 @@ const Login = () => {
                                 </div>
 
                                 <div className="row mb-0">
-                                    <div className="col-md-8 offset-md-4">
+                                    <div className="col-md-12">
                                         <button type="submit" name="submit" className="btn btn-primary" onClick={() => login()}>
                                             Inloggen
                                         </button>
