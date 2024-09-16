@@ -102,3 +102,70 @@ textarea:focus, input:focus{
     padding: 15px 15px;
     margin-bottom: 10px;
 }
+
+.header-right{
+    width: 100%;
+    float: right;
+    text-align: right;
+}
+
+.header-right ul{
+    padding:0;
+    margin:0;
+}
+
+.header-right li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.header-right li.streak-icon i{
+    color: orange;
+}
+
+.header-right li i{
+    color: #456d61;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.sidebar{
+    max-width:200px;
+    width: 100%;
+    background: #ffffff;
+    height: 100vh;
+    position: fixed;
+    padding: 0;
+}
+
+.sidebar ul{
+    padding:0;
+    margin:0;
+}
+
+.sidebar ul li{
+    list-style-type: none;
+    padding: 10px 10px;
+}
+
+.sidebar ul a{
+    color: #313634;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.sidebar ul li i{
+    color: #456d61;
+    width: 23px;
+}
+
+.sidebar .active li{
+    background: rgba(69, 109, 97, 0.2) !important;
+    padding: 10px 10px;
+}
+
+.content{
+    padding: 30px 30px 30px 230px;
+}

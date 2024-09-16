@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import { withRouter } from "../components/withRouter";
 import { fetchApi } from "../Functions";
+import Sidebar from "../components/Sidebar";
 
 const Challenge = (props) => {
     const [challenge, setChallenge] = useState([]);
@@ -25,13 +26,15 @@ const Challenge = (props) => {
     return(
         <React.Fragment>
             <Header />
-            <div className="container">
-            <h3>{challenge.name}</h3>
+            <Sidebar />
+            <div className="content">
+                <div className="container-fluid">
+                    <h3>{challenge.name}</h3>
 
-            {books.map((book, i) => {
-                return(<div key={i}>{book.name}</div>)
-            })}
-            
+                    {books.map((book, i) => {
+                        return(<div key={i}>{book.name}</div>)
+                    })}
+                </div>
             </div>
         </React.Fragment>
     );
