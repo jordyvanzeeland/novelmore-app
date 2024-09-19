@@ -26,7 +26,7 @@ const Header = () => {
             <div className="header-right">
                 <ul>
                     <li className="streak-icon"><i className="fa-solid fa-fire"></i> 0</li>
-                    <li><i class="fa-solid fa-circle-user"></i> {currentUser.name}</li>
+                    <li><i className="fa-solid fa-circle-user"></i> {currentUser.name}</li>
                 </ul>
             </div>
             </nav>
