@@ -37,6 +37,12 @@ const Challenge = (props) => {
         getBooksOfChallenge();
     }
 
+    const checkBookofChallenge = async(bookid, event) => {
+        const data = await fetchApi("PUT", `/challenge/${props.router.params.id}/book/${bookid}/readed`, JSON.stringify({
+            "readed": event.target.checked == true ? 1 : 0
+        }));
+    }
+
     useEffect(() => {
         getChallenge();
         getBooksOfChallenge();
@@ -51,7 +57,12 @@ const Challenge = (props) => {
                     <h3>{challenge.name}</h3>
 
                     {books.map((book, i) => {
-                        return(<div key={i}>{book.name} - <button onClick={() => deleteBookFromChallenge(book.id)}>Delete</button></div>)
+                        return(
+                            <div key={i}>
+                                {book.name} - 
+                                <input type="checkbox" defaultChecked={book.readed == 1 ? 'true' : ''} onChange={(event) => checkBookofChallenge(book.id, event)}/> - 
+                                <button onClick={() => deleteBookFromChallenge(book.id)}>Delete</button>
+                            </div>)
                     })}
                 </div>
 
