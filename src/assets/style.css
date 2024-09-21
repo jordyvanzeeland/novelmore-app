@@ -169,3 +169,63 @@ textarea:focus, input:focus{
 .content{
     padding: 30px 30px 30px 230px;
 }
+
+.calendar {
+    text-align: center;
+    margin: 0 auto;
+    /* max-width: 600px; */
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .week-grid,
+  .month-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+  }
+  
+  .day {
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+  }
+
+  .daynumber{
+    background: #e5e5e5;
+    border-radius: 100%;;
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    padding: 5px;
+    line-height: 25px;
+  }
+
+  .currentDay{
+    background: #456d61;
+    color: #ffffff;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin: auto;
+    padding: 5px;
+    line-height: 25px;
+  }
+
+  .day-names-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Display day names in a row */
+    gap: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .day-name, .dayname {
+    text-align: center;
+    font-weight: bold;
+  }
+  
